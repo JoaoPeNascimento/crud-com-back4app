@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard de Vendas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/3.4.4/parse.min.js"></script>
+  </head>
+  <body>
+    <div id="overlay"></div>
+    <section id="menu" class="right-360">
+      <div id="topo-menu">
+        <p style="color: #000000">Menu</p>
+        <button id="fechar-menu" onclick="fecharMenu()">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
+      <div id="corpo-menu">
+        <a href="./index.html">Dashboard</a>
+        <a href="./adicionar-Vendas.html">Adicionar</a>
+        <a href="./editar-Vendas.html">Editar</a>
+        <a href="./deletar-Vendas.html">Deletar</a>
+      </div>
+    </section>
+    <header>
+      <div></div>
+      <div>
+        <button id="abrir-menu" onclick="abrirMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <h1>Deletar Venda</h1>
+    <form id="deletarVendas">
+      <label for="id">ID do Produto:</label>
+      <input type="text" id="idDeletar" name="id" required />
+
+      <button type="submit">Enviar</button>
+    </form>
+    <script src="./src/scriptDelete.js"></script>
+  </body>
+</html>
